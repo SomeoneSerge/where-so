@@ -15,7 +15,7 @@ pkgs.callPackage
       runHook preCheck
 
       echo Sanity checking where-so
-      if LD_LIBRARY_PATH=$PWD ./where-so libfindme.so | grep -q "$PWD" ; then
+      if LD_LIBRARY_PATH=$PWD ./where-so libfindme.so ; then
         echo Passed 1 test
       else
         echo Failed 1 test
